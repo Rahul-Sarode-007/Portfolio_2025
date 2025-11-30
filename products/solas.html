@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLAS Compliance - Safety of Life at Sea</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .product-hero {
+            background: linear-gradient(135deg, #228B22 0%, #32CD32 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .product-hero h1 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .product-hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+        }
+
+        .product-content {
+            padding: 60px 0;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .spec-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .spec-card i {
+            font-size: 2.5rem;
+            color: #228B22;
+            margin-bottom: 1rem;
+        }
+
+        .spec-card h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .spec-card p {
+            color: #666;
+            font-size: 0.875rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .feature-list li {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+            border-left: 4px solid #228B22;
+            border-radius: 8px;
+        }
+
+        .feature-list li i {
+            color: #228B22;
+            margin-right: 0.75rem;
+        }
+
+        @media (max-width: 768px) {
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>Rahul Sarode</h2>
+                <span>Satcom Specialist</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#competencies">Competencies</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="product-hero">
+        <div class="container">
+            <h1><i class="fas fa-book"></i> SOLAS Compliance</h1>
+            <p>Safety of Life at Sea - International Maritime Safety Standards</p>
+        </div>
+    </div>
+
+    <section class="product-content">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2>Overview</h2>
+                <p>The International Convention for the Safety of Life at Sea (SOLAS) is the most important
+                    international treaty concerning the safety of merchant ships. First adopted in 1914 following the
+                    Titanic disaster, SOLAS sets minimum safety standards for the construction, equipment, and
+                    operation of ships. The convention is maintained and updated by the International Maritime
+                    Organization (IMO) to address evolving maritime safety challenges.</p>
+
+                <h2 style="margin-top: 3rem;">Key SOLAS Chapters Relevant to Satcom</h2>
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <h3>Chapter IV</h3>
+                        <p>Radiocommunications<br>(GMDSS Requirements)</p>
+                    </div>
+                    <div class="spec-card">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Chapter V</h3>
+                        <p>Safety of Navigation<br>(AIS, LRIT, ECDIS)</p>
+                    </div>
+                    <div class="spec-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Chapter XI-2</h3>
+                        <p>Maritime Security<br>(ISPS Code, SSAS)</p>
+                    </div>
+                </div>
+
+                <h2 style="margin-top: 3rem;">SOLAS Chapter IV - Radiocommunications</h2>
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+                    <h4>GMDSS Equipment Requirements</h4>
+                    <ul style="margin-top: 1rem;">
+                        <li><strong>VHF Radio Installation:</strong> DSC capability on Channel 70</li>
+                        <li><strong>MF/HF Radio:</strong> For vessels operating beyond Sea Area A1</li>
+                        <li><strong>INMARSAT Ship Earth Station:</strong> For Sea Area A3 operations</li>
+                        <li><strong>EPIRB (406 MHz):</strong> Satellite emergency beacon (COSPAS-SARSAT)</li>
+                        <li><strong>SART:</strong> Search and Rescue Transponder (9 GHz)</li>
+                        <li><strong>NAVTEX Receiver:</strong> For maritime safety information</li>
+                        <li><strong>Reserve Power Supply:</strong> Battery backup for all GMDSS equipment</li>
+                        <li><strong>Portable VHF:</strong> For survival craft communication</li>
+                    </ul>
+                </div>
+
+                <h2 style="margin-top: 3rem;">SOLAS Chapter V - Safety of Navigation</h2>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>AIS (Automatic Identification System):</strong>
+                        Mandatory for ships ≥300 GT on international voyages</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>LRIT (Long-Range Identification and
+                            Tracking):</strong> Position reporting every 6 hours</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>ECDIS (Electronic Chart Display):</strong> Required
+                        for new ships or as per phase-in schedule</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Voyage Data Recorder (VDR):</strong> Maritime
+                        "black box" for incident investigation</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Bridge Navigational Watch Alarm System
+                            (BNWAS):</strong> Monitoring officer of the watch</li>
+                </ul>
+
+                <h2 style="margin-top: 3rem;">SOLAS Chapter XI-2 - Maritime Security</h2>
+                <div
+                    style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                    <h4><i class="fas fa-lock" style="color: #ffc107;"></i> ISPS Code Requirements</h4>
+                    <ul style="margin-top: 1rem;">
+                        <li><strong>SSAS (Ship Security Alert System):</strong> Covert security alerting capability
+                        </li>
+                        <li><strong>Ship Security Plan (SSP):</strong> Comprehensive security procedures and measures
+                        </li>
+                        <li><strong>Ship Security Officer (SSO):</strong> Designated security responsibilities</li>
+                        <li><strong>Company Security Officer (CSO):</strong> Shore-based security coordination</li>
+                        <li><strong>International Ship Security Certificate (ISSC):</strong> Verification of compliance
+                        </li>
+                        <li><strong>Security Levels:</strong> Three levels (1, 2, 3) with escalating measures</li>
+                    </ul>
+                </div>
+
+                <h2 style="margin-top: 3rem;">Compliance Requirements by Vessel Type</h2>
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+                    <h4>Equipment Requirements Matrix</h4>
+                    <div style="margin-top: 1rem;">
+                        <h5 style="color: #228B22; margin-top: 1.5rem;">Passenger Ships (All Sizes)</h5>
+                        <ul>
+                            <li>Full GMDSS equipment suite (Chapter IV)</li>
+                            <li>AIS Class A transponder</li>
+                            <li>LRIT system</li>
+                            <li>SSAS (if ≥500 GT on international voyages)</li>
+                            <li>VDR or S-VDR</li>
+                        </ul>
+
+                        <h5 style="color: #228B22; margin-top: 1.5rem;">Cargo Ships ≥300 GT (International Voyages)</h5>
+                        <ul>
+                            <li>GMDSS equipment appropriate to sea area</li>
+                            <li>AIS Class A transponder</li>
+                            <li>LRIT system</li>
+                            <li>SSAS (if ≥500 GT)</li>
+                            <li>VDR (if ≥3000 GT, built after July 2002)</li>
+                        </ul>
+
+                        <h5 style="color: #228B22; margin-top: 1.5rem;">Cargo Ships ≥500 GT (Domestic Voyages)</h5>
+                        <ul>
+                            <li>GMDSS equipment as per flag state requirements</li>
+                            <li>AIS Class A transponder</li>
+                            <li>Additional equipment as required by flag state</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 style="margin-top: 3rem;">Certification & Surveys</h2>
+                <ul class="feature-list">
+                    <li><i class="fas fa-certificate"></i> <strong>Safety Equipment Certificate:</strong> Issued after
+                        initial and renewal surveys</li>
+                    <li><i class="fas fa-clipboard-check"></i> <strong>Radio Survey:</strong> Annual verification of
+                        GMDSS equipment</li>
+                    <li><i class="fas fa-calendar-check"></i> <strong>Periodic Surveys:</strong> Every 12 months for
+                        radio equipment</li>
+                    <li><i class="fas fa=" fas fa-tools"></i> <strong>Maintenance Requirements:</strong> At-sea or
+                        shore-based arrangements</li>
+                    <li><i class="fas fa-user-graduate"></i> <strong>Manning Requirements:</strong> GMDSS Radio
+                        Operator's Certificate (GOC/ROC)</li>
+                </ul>
+
+                <h2 style="margin-top: 3rem;">Benefits of SOLAS Compliance</h2>
+                <ul class="feature-list">
+                    <li><i class="fas fa-life-ring"></i> <strong>Enhanced Safety:</strong> Comprehensive safety
+                        standards protect lives at sea</li>
+                    <li><i class="fas fa-globe"></i> <strong>International Recognition:</strong> Globally accepted
+                        safety certification</li>
+                    <li><i class="fas fa-gavel"></i> <strong>Legal Compliance:</strong> Meets mandatory international
+                        maritime law</li>
+                    <li><i class="fas fa-anchor"></i> <strong>Port State Control:</strong> Facilitates smooth port
+                        inspections and operations</li>
+                    <li><i class="fas fa-handshake"></i> <strong>Insurance Requirements:</strong> Satisfies P&I club
+                        and insurance conditions</li>
+                    <li><i class="fas fa-award"></i> <strong>Industry Standards:</strong> Demonstrates commitment to
+                        maritime safety excellence</li>
+                </ul>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="../index.html#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Contact for More Information
+                    </a>
+                    <a href="../index.html" class="btn btn-secondary" style="margin-left: 1rem;">
+                        <i class="fas fa-arrow-left"></i> Back to Portfolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rahul Sarode. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

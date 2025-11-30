@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIS - Automatic Identification System</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .product-hero {
+            background: linear-gradient(135deg, #1E90FF 0%, #4169E1 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .product-hero h1 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .product-hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+        }
+
+        .product-content {
+            padding: 60px 0;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .spec-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .spec-card i {
+            font-size: 2.5rem;
+            color: #1E90FF;
+            margin-bottom: 1rem;
+        }
+
+        .spec-card h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .spec-card p {
+            color: #666;
+            font-size: 0.875rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .feature-list li {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+            border-left: 4px solid #1E90FF;
+            border-radius: 8px;
+        }
+
+        .feature-list li i {
+            color: #1E90FF;
+            margin-right: 0.75rem;
+        }
+
+        @media (max-width: 768px) {
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>Rahul Sarode</h2>
+                <span>Satcom Specialist</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#competencies">Competencies</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="product-hero">
+        <div class="container">
+            <h1><i class="fas fa-broadcast-tower"></i> AIS</h1>
+            <p>Automatic Identification System</p>
+        </div>
+    </div>
+
+    <section class="product-content">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2>Overview</h2>
+                <p>The Automatic Identification System (AIS) is an automated tracking system that uses VHF radio
+                    frequencies to exchange vessel information between ships and shore stations. AIS enhances maritime
+                    safety by providing real-time vessel position, course, speed, and other critical navigation data,
+                    enabling collision avoidance and improving situational awareness for mariners and vessel traffic
+                    services (VTS).</p>
+
+                <h2 style="margin-top: 3rem;">AIS Classes & Specifications</h2>
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <i class="fas fa-ship"></i>
+                        <h3>Class A</h3>
+                        <p>SOLAS Vessels<br>(2-10 sec updates)</p>
+                    </div>
+                    <div class="spec-card">
+                        <i class="fas fa-sailboat"></i>
+                        <h3>Class B</h3>
+                        <p>Non-SOLAS Vessels<br>(30 sec updates)</p>
+                    </div>
+                    <div class="spec-card">
+                        <i class="fas fa-signal"></i>
+                        <h3>Range</h3>
+                        <p>20-30 NM<br>(VHF Line of Sight)</p>
+                    </div>
+                </div>
+
+                <h2 style="margin-top: 3rem;">Transmitted Information</h2>
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+                    <h4>AIS Data Types</h4>
+                    <div style="margin-top: 1rem;">
+                        <h5 style="color: #1E90FF; margin-top: 1.5rem;">Dynamic Information (Updated Frequently)</h5>
+                        <ul>
+                            <li>Vessel position (latitude/longitude)</li>
+                            <li>Position accuracy and timestamp</li>
+                            <li>Course over ground (COG)</li>
+                            <li>Speed over ground (SOG)</li>
+                            <li>Heading</li>
+                            <li>Rate of turn (ROT)</li>
+                            <li>Navigational status (underway, at anchor, moored, etc.)</li>
+                        </ul>
+
+                        <h5 style="color: #1E90FF; margin-top: 1.5rem;">Static Information (Updated Every 6 Minutes)
+                        </h5>
+                        <ul>
+                            <li>IMO number (Class A only)</li>
+                            <li>Call sign and vessel name</li>
+                            <li>Vessel type and dimensions</li>
+                            <li>Type of position fixing device</li>
+                            <li>Location of position reference point</li>
+                        </ul>
+
+                        <h5 style="color: #1E90FF; margin-top: 1.5rem;">Voyage-Related Information (As Required)</h5>
+                        <ul>
+                            <li>Destination</li>
+                            <li>Estimated time of arrival (ETA)</li>
+                            <li>Draught</li>
+                            <li>Cargo type (dangerous goods)</li>
+                            <li>Number of persons onboard</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 style="margin-top: 3rem;">Technical Features</h2>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Autonomous Operation:</strong> Continuous automatic
+                        transmission without operator intervention</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>VHF Channels:</strong> Operates on dedicated
+                        maritime VHF channels (161.975 MHz and 162.025 MHz)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>SOTDMA Protocol:</strong> Self-Organizing Time
+                        Division Multiple Access for efficient channel usage</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Integration Capability:</strong> Interfaces with
+                        ECDIS, radar, and other navigation systems</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Collision Avoidance:</strong> Provides CPA (Closest
+                        Point of Approach) and TCPA (Time to CPA) calculations</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>VTS Support:</strong> Enables Vessel Traffic
+                        Services to monitor and manage vessel movements</li>
+                </ul>
+
+                <h2 style="margin-top: 3rem;">Regulatory Requirements</h2>
+                <div
+                    style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                    <h4><i class="fas fa-gavel" style="color: #ffc107;"></i> SOLAS Chapter V - Regulation 19</h4>
+                    <ul style="margin-top: 1rem;">
+                        <li><strong>All Ships ≥300 GT:</strong> Engaged on international voyages</li>
+                        <li><strong>All Cargo Ships ≥500 GT:</strong> Not engaged on international voyages</li>
+                        <li><strong>All Passenger Ships:</strong> Irrespective of size</li>
+                        <li><strong>Implementation Date:</strong> Phased implementation completed by July 1, 2008</li>
+                        <li><strong>Class A Transponder:</strong> Required for SOLAS vessels</li>
+                        <li><strong>Performance Standards:</strong> IMO Resolution MSC.74(69) and ITU-R M.1371</li>
+                        <li><strong>Annual Testing:</strong> Verification of proper operation required</li>
+                    </ul>
+                </div>
+
+                <h2 style="margin-top: 3rem;">Applications & Benefits</h2>
+                <ul class="feature-list">
+                    <li><i class="fas fa-shield-alt"></i> <strong>Collision Avoidance:</strong> Real-time awareness of
+                        surrounding vessel traffic</li>
+                    <li><i class="fas fa-anchor"></i> <strong>Port Operations:</strong> Improved traffic management and
+                        berth planning</li>
+                    <li><i class="fas fa-search"></i> <strong>Search and Rescue:</strong> Rapid identification and
+                        location of vessels in distress</li>
+                    <li><i class="fas fa-chart-line"></i> <strong>Fleet Management:</strong> Real-time vessel tracking
+                        and route optimization</li>
+                    <li><i class="fas fa-lock"></i> <strong>Maritime Security:</strong> Vessel identification and
+                        monitoring for security purposes</li>
+                    <li><i class="fas fa-water"></i> <strong>Environmental Protection:</strong> Monitoring vessel
+                        movements in sensitive areas</li>
+                    <li><i class="fas fa-gavel"></i> <strong>Regulatory Compliance:</strong> Meets SOLAS Chapter V
+                        requirements</li>
+                </ul>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="../index.html#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Contact for More Information
+                    </a>
+                    <a href="../index.html" class="btn btn-secondary" style="margin-left: 1rem;">
+                        <i class="fas fa-arrow-left"></i> Back to Portfolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rahul Sarode. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

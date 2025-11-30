@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMDSS - Global Maritime Distress and Safety System</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .product-hero {
+            background: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .product-hero h1 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .product-hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+        }
+
+        .product-content {
+            padding: 60px 0;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .spec-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .spec-card i {
+            font-size: 2.5rem;
+            color: #FF8C00;
+            margin-bottom: 1rem;
+        }
+
+        .spec-card h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .spec-card p {
+            color: #666;
+            font-size: 0.875rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .feature-list li {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+            border-left: 4px solid #FF8C00;
+            border-radius: 8px;
+        }
+
+        .feature-list li i {
+            color: #FF8C00;
+            margin-right: 0.75rem;
+        }
+
+        @media (max-width: 768px) {
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>Rahul Sarode</h2>
+                <span>Satcom Specialist</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#competencies">Competencies</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="product-hero">
+        <div class="container">
+            <h1><i class="fas fa-life-ring"></i> GMDSS</h1>
+            <p>Global Maritime Distress and Safety System</p>
+        </div>
+    </div>
+
+    <section class="product-content">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2>Overview</h2>
+                <p>The Global Maritime Distress and Safety System (GMDSS) is an internationally agreed-upon set of
+                    safety procedures, equipment, and communication protocols designed to increase safety and make it
+                    easier to rescue distressed ships, boats, and aircraft. GMDSS uses satellite and terrestrial
+                    radiocommunications to ensure that no matter where a ship is in distress, help can be summoned and
+                    coordinated.</p>
+
+                <h2 style="margin-top: 3rem;">Sea Areas & Equipment Requirements</h2>
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <i class="fas fa-water"></i>
+                        <h3>Sea Area A1</h3>
+                        <p>VHF Coverage<br>(20-30 nm from coast)</p>
+                    </div>
+                    <div class="spec-card">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <h3>Sea Area A2</h3>
+                        <p>MF Coverage<br>(Up to 100 nm)</p>
+                    </div>
+                    <div class="spec-card">
+                        <i class="fas fa-satellite"></i>
+                        <h3>Sea Area A3</h3>
+                        <p>INMARSAT Coverage<br>(70°N to 70°S)</p>
+                    </div>
+                    <div class="spec-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Sea Area A4</h3>
+                        <p>Polar Regions<br>(HF Coverage)</p>
+                    </div>
+                </div>
+
+                <h2 style="margin-top: 3rem;">Core GMDSS Components</h2>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>VHF DSC (Digital Selective Calling):</strong>
+                        Channel 70 for distress alerting in Sea Area A1</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>MF/HF DSC:</strong> Medium and High Frequency
+                        distress alerting for extended range</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>INMARSAT Ship Earth Station:</strong> Satellite
+                        communication for distress, safety, and routine communications</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>EPIRB (Emergency Position Indicating Radio
+                            Beacon):</strong> 406 MHz satellite distress beacon (COSPAS-SARSAT)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>SART (Search and Rescue Transponder):</strong> 9
+                        GHz radar transponder for locating survival craft</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>NAVTEX:</strong> Automated reception of maritime
+                        safety information (MSI)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>EGC (Enhanced Group Calling):</strong> Reception of
+                        maritime safety information via satellite</li>
+                </ul>
+
+                <h2 style="margin-top: 3rem;">Functional Requirements</h2>
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+                    <h4>GMDSS Must Provide Capability For:</h4>
+                    <ul style="margin-top: 1rem;">
+                        <li><strong>Ship-to-Shore Distress Alerting:</strong> Via satellite or terrestrial
+                            radiocommunications</li>
+                        <li><strong>Shore-to-Ship Distress Alerting:</strong> Relay of distress alerts to ships in the
+                            vicinity</li>
+                        <li><strong>Ship-to-Ship Distress Alerting:</strong> Communication between vessels in distress
+                            situations</li>
+                        <li><strong>SAR Coordination:</strong> Search and rescue coordination communications</li>
+                        <li><strong>On-Scene Communications:</strong> Between ship in distress and assisting units</li>
+                        <li><strong>Locating Signals:</strong> Transmission and reception of locating signals</li>
+                        <li><strong>Maritime Safety Information:</strong> Reception of navigational and meteorological
+                            warnings</li>
+                        <li><strong>General Communications:</strong> Ship management and operational communications</li>
+                        <li><strong>Bridge-to-Bridge:</strong> VHF communications for navigation safety</li>
+                    </ul>
+                </div>
+
+                <h2 style="margin-top: 3rem;">Regulatory Requirements</h2>
+                <div
+                    style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                    <h4><i class="fas fa-gavel" style="color: #ffc107;"></i> SOLAS Chapter IV</h4>
+                    <ul style="margin-top: 1rem;">
+                        <li><strong>Applicability:</strong> All passenger ships and cargo ships ≥300 GT on
+                            international voyages</li>
+                        <li><strong>Implementation Date:</strong> Mandatory since February 1, 1999</li>
+                        <li><strong>Certification:</strong> Radio Survey and GMDSS Radio Maintenance Certificate
+                            required</li>
+                        <li><strong>Manning:</strong> GMDSS Radio Operator's Certificate (GOC/ROC) required</li>
+                        <li><strong>Maintenance:</strong> At-sea or shore-based maintenance arrangements mandatory</li>
+                        <li><strong>Battery Requirements:</strong> Reserve power for all GMDSS equipment</li>
+                    </ul>
+                </div>
+
+                <h2 style="margin-top: 3rem;">Benefits</h2>
+                <ul class="feature-list">
+                    <li><i class="fas fa-life-ring"></i> <strong>Enhanced Safety:</strong> Automated distress alerting
+                        ensures rapid response to emergencies</li>
+                    <li><i class="fas fa-satellite-dish"></i> <strong>Global Coverage:</strong> Communication
+                        capability anywhere in the world</li>
+                    <li><i class="fas fa-users"></i> <strong>SAR Coordination:</strong> Improved coordination between
+                        rescue authorities and vessels</li>
+                    <li><i class="fas fa-info-circle"></i> <strong>Safety Information:</strong> Automatic reception of
+                        navigational and meteorological warnings</li>
+                    <li><i class="fas fa-gavel"></i> <strong>Regulatory Compliance:</strong> Meets SOLAS Chapter IV
+                        requirements</li>
+                </ul>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="../index.html#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Contact for More Information
+                    </a>
+                    <a href="../index.html" class="btn btn-secondary" style="margin-left: 1rem;">
+                        <i class="fas fa-arrow-left"></i> Back to Portfolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rahul Sarode. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
