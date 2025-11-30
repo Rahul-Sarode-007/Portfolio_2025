@@ -1,870 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahul Sarode - Satcom Specialist Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #0a2463;
-            --secondary-color: #1e88e5;
-            --accent-color: #3e92cc;
-            --text-color: #333;
-            --light-gray: #f8f9fa;
-            --medium-gray: #e9ecef;
-            --dark-gray: #6c757d;
-            --gradient: linear-gradient(135deg, #0a2463, #1e88e5);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: #fff;
-            overflow-x: hidden;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Styles */
-        header {
-            background: var(--gradient);
-            color: white;
-            padding: 100px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0 0L100 100M100 0L0 100" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></svg>');
-            opacity: 0.1;
-        }
-        
-        .header-content {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background-color: var(--light-gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-            border: 6px solid rgba(255, 255, 255, 0.3);
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-        
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-        
-        .profile-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3.5rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .job-title {
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-bottom: 40px;
-            color: rgba(255, 255, 255, 0.9);
-            letter-spacing: 1px;
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 10px 20px;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-item:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-        }
-        
-        .contact-item i {
-            font-size: 1.3rem;
-        }
-        
-        .download-resume {
-            margin-top: 40px;
-            display: inline-block;
-            background-color: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-        }
-        
-        .download-resume:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .download-resume i {
-            margin-right: 10px;
-        }
-        
-        /* Navigation */
-        nav {
-            background-color: white;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: center;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin: 0 20px;
-        }
-        
-        .nav-links a {
-            display: block;
-            padding: 25px 0;
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 600;
-            position: relative;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--secondary-color);
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background-color: var(--accent-color);
-            transition: width 0.3s;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        /* Section Styles */
-        section {
-            padding: 100px 0;
-        }
-        
-        .section-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
-            font-weight: 600;
-            margin-bottom: 60px;
-            color: var(--primary-color);
-            position: relative;
-            padding-bottom: 20px;
-            text-align: center;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: var(--gradient);
-        }
-        
-        /* Summary Section */
-        #summary {
-            background-color: var(--light-gray);
-        }
-        
-        .summary-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1.2rem;
-            line-height: 1.9;
-            background-color: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-        
-        .highlight {
-            font-weight: 600;
-            color: var(--secondary-color);
-            position: relative;
-            display: inline-block;
-        }
-        
-        .highlight::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background-color: rgba(30, 136, 229, 0.2);
-            border-radius: 2px;
-        }
-        
-        /* Skills Section */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
-        
-        .skill-category {
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            padding: 30px;
-            transition: all 0.3s ease;
-            border-top: 5px solid var(--accent-color);
-        }
-        
-        .skill-category:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .skill-category h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .skill-category h3 i {
-            color: var(--accent-color);
-            font-size: 1.8rem;
-        }
-        
-        .skill-list {
-            list-style: none;
-        }
-        
-        .skill-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid var(--medium-gray);
-            transition: all 0.3s ease;
-        }
-        
-        .skill-list li:hover {
-            padding-left: 10px;
-            color: var(--secondary-color);
-        }
-        
-        .skill-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .skill-list li::before {
-            content: '✓';
-            color: var(--accent-color);
-            font-weight: bold;
-            margin-right: 15px;
-            font-size: 1.2rem;
-        }
-        
-        /* Experience Section */
-        #experience {
-            background-color: var(--light-gray);
-        }
-        
-        .timeline {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 8px;
-            background: var(--gradient);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -4px;
-            border-radius: 4px;
-        }
-        
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-        }
-        
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            right: -17px;
-            background-color: white;
-            border: 5px solid var(--accent-color);
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-            box-shadow: 0 0 0 4px rgba(62, 146, 204, 0.2);
-        }
-        
-        .left {
-            left: 0;
-        }
-        
-        .right {
-            left: 50%;
-        }
-        
-        .right::after {
-            left: -16px;
-        }
-        
-        .timeline-content {
-            padding: 30px;
-            background-color: white;
-            position: relative;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-        
-        .timeline-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .timeline-date {
-            font-weight: 600;
-            color: var(--secondary-color);
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-        
-        .timeline-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
-        
-        .timeline-company {
-            font-style: italic;
-            color: var(--dark-gray);
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-        
-        .timeline-description {
-            list-style-type: none;
-        }
-        
-        .timeline-description li {
-            margin-bottom: 12px;
-            position: relative;
-            padding-left: 25px;
-            transition: all 0.3s ease;
-        }
-        
-        .timeline-description li:hover {
-            padding-left: 30px;
-            color: var(--secondary-color);
-        }
-        
-        .timeline-description li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-weight: bold;
-            font-size: 1.5rem;
-            line-height: 1;
-        }
-        
-        /* Education Section */
-        .education-card {
-            background: linear-gradient(135deg, white, var(--light-gray));
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            padding: 40px;
-            max-width: 800px;
-            margin: 0 auto;
-            border-left: 5px solid var(--accent-color);
-        }
-        
-        .education-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            align-items: center;
-        }
-        
-        .education-degree {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-        
-        .education-year {
-            color: var(--dark-gray);
-            background-color: var(--light-gray);
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-        }
-        
-        .education-school {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: var(--secondary-color);
-        }
-        
-        .education-gpa {
-            font-weight: 600;
-            color: var(--secondary-color);
-            background-color: rgba(30, 136, 229, 0.1);
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 20px;
-        }
-        
-        /* Certifications Section */
-        #certifications {
-            background-color: var(--light-gray);
-        }
-        
-        .certifications-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
-        
-        .certification-card {
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            padding: 30px;
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            transition: all 0.3s ease;
-            border-top: 5px solid var(--accent-color);
-        }
-        
-        .certification-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .certification-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            box-shadow: 0 5px 15px rgba(30, 136, 229, 0.3);
-        }
-        
-        .certification-icon i {
-            font-size: 2rem;
-            color: white;
-        }
-        
-        .certification-details h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.4rem;
-            margin-bottom: 8px;
-            color: var(--primary-color);
-        }
-        
-        .certification-details p {
-            color: var(--dark-gray);
-            font-size: 1.1rem;
-        }
-        
-        /* Personal Details Section */
-        .personal-details {
-            background: linear-gradient(135deg, white, var(--light-gray));
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            padding: 40px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .details-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .detail-item {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-        
-        .detail-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .detail-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            box-shadow: 0 5px 15px rgba(30, 136, 229, 0.3);
-        }
-        
-        .detail-icon i {
-            color: white;
-            font-size: 1.5rem;
-        }
-        
-        .detail-text {
-            font-size: 1.1rem;
-        }
-        
-        .detail-label {
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: var(--primary-color);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--gradient);
-            color: white;
-            text-align: center;
-            padding: 60px 0;
-        }
-        
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 25px;
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: white;
-            transition: all 0.3s ease;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .social-links a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .social-links i {
-            font-size: 1.5rem;
-        }
-        
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            h1 {
-                font-size: 2.8rem;
-            }
-            
-            .job-title {
-                font-size: 1.5rem;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .nav-links li {
-                margin: 0 10px;
-            }
-            
-            .timeline::after {
-                left: 31px;
-            }
-            
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-            
-            .timeline-item::before {
-                left: 60px;
-                border: medium solid white;
-                border-width: 10px 10px 10px 0;
-                border-color: transparent white transparent transparent;
-            }
-            
-            .left::after, .right::after {
-                left: 15px;
-            }
-            
-            .right {
-                left: 0%;
-            }
-            
-            .section-title {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="profile-img">
-                    <img src="Profile_pic_1.png" alt="Rahul Sarode">
-                </div>
-                <h1>Rahul Sarode</h1>
-                <div class="job-title">Satcom Specialist II</div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+91 8424821905</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>rahulsarode048@gmail.com</span>
-                    </div>
-                    <a href="https://linkedin.com/in/rahul-sarode-7780b7151/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 8px;">
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <span>linkedin.com/in/rahul-sarode-7780b7151/</span>
-                        </div>
-                    </a>
-                </div>
-                <!-- Download Resume Button -->
-                <a href="https://drive.google.com/file/d/1Ek4F9wWm9NrSTJN2pxt5mQgW1H2Qikdb/view?usp=sharing" target="_blank" class="download-resume">
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
-            </div>
-        </div>
-    </header>
+    <meta name="description"
+        content="Rahul Sarode - Professional Satellite Communications Specialist with 7+ years of expertise in maritime connectivity solutions.">
+    <title>Rahul Sarode - Satellite Communications Specialist</title>
 
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
     <!-- Navigation -->
-    <nav>
+    <nav class="navbar">
         <div class="container">
-            <div class="nav-container">
-                <ul class="nav-links">
-                    <li><a href="#summary">Summary</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#personal">Personal</a></li>
-                </ul>
+            <div class="nav-brand">
+                <h2>Rahul Sarode</h2>
+                <span>Satcom Specialist</span>
             </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#competencies">Competencies</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Summary Section -->
-    <section id="summary">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="container">
-            <h2 class="section-title">Professional Summary</h2>
-            <div class="summary-content">
-                <p>Results-driven Satellite Communications Specialist with <span class="highlight">7+ years</span> of expertise in end-to-end maritime connectivity solutions, contributing to services that support <span class="highlight">6,000+ vessels</span> across global shipping routes.</p>
-                <p>Expert in orchestrating complex vessel takeovers and handovers, deployment of diverse satellite technologies including Starlink, Inmarsat (FX, FBB), Iridium Certus, and KVH VSAT, and ensuring <span class="highlight">100% regulatory compliance</span>.</p>
-                <p>Demonstrated ability to <span class="highlight">reduce service disruptions by 30%</span> through standardized processes while ensuring 100% regulatory compliance for international maritime operations.</p>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-satellite"></i>
+                    <span>Professional Satcom Specialist</span>
+                </div>
+                <h1>Connecting the World's <span class="highlight">Maritime Fleet</span></h1>
+                <p class="hero-subtitle">7+ years of expertise in end-to-end satellite communications, supporting
+                    <strong>6,000+ vessels</strong> across global shipping routes.</p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">7+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">6000+</div>
+                        <div class="stat-label">Vessels Supported</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">LRIT Tests</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Compliance Rate</div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="https://drive.google.com/file/d/1Ek4F9wWm9NrSTJN2pxt5mQgW1H2Qikdb/view?usp=sharing"
+                        target="_blank" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Get in Touch
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Core Competencies & Technical Proficiencies</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3><i class="fas fa-satellite"></i> Satellite Systems</h3>
-                    <ul class="skill-list">
-                        <li>LEO Systems: Starlink Maritime, Eutelsat OneWeb</li>
-                        <li>GEO Systems: Inmarsat Fleet Xpress (FX), FleetBroadband (FBB), Fleet One, Sat C, GSPS</li>
-                        <li>MSS Systems: Iridium Certus, Open Port, GMDSS Terminals</li>
-                        <li>VSAT Systems: KVH TracPhone V-Series, KVH Agile Manager</li>
+            <div class="section-header">
+                <span class="section-tag">Professional Summary</span>
+                <h2>About Me</h2>
+            </div>
+
+            <div class="about-content">
+                <p class="lead">
+                    Results-driven Satellite Communications Specialist with <strong>7+ years of expertise</strong> in
+                    end-to-end maritime connectivity solutions at
+                    <a href="https://www.stationsatcom.com/" target="_blank" class="link-primary">Station Satcom</a>,
+                    contributing to services that support <strong>6,000+ vessels</strong> across global shipping routes.
+                </p>
+
+                <p>
+                    Expert in orchestrating complex vessel takeovers and handovers, deployment of diverse satellite
+                    technologies including
+                    <a href="products/starlink.html">Starlink</a>,
+                    <a href="products/inmarsat-fx.html">Inmarsat Fleet Xpress</a>,
+                    <a href="products/fleetbroadband.html">FleetBroadband</a>,
+                    <a href="products/iridium-certus.html">Iridium Certus</a>, and
+                    <a href="products/kvh-vsat.html">KVH VSAT</a>,
+                    ensuring 100% regulatory compliance.
+                </p>
+
+                <div class="achievement-box">
+                    <i class="fas fa-trophy"></i>
+                    <div>
+                        <strong>Key Achievement:</strong> Reduced service disruptions by <strong>30%</strong> through
+                        standardized processes while maintaining <strong>100% regulatory compliance</strong> for
+                        international maritime operations.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competencies Section -->
+    <section id="competencies" class="competencies">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Technical Expertise</span>
+                <h2>Core Competencies & Technical Proficiencies</h2>
+            </div>
+
+            <div class="competencies-grid">
+                <!-- Satellite Systems -->
+                <div class="competency-card">
+                    <div class="card-icon">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <h3>Satellite Systems</h3>
+
+                    <div class="tech-group">
+                        <h4>LEO Systems</h4>
+                        <ul>
+                            <li><a href="products/starlink.html"><i class="fas fa-rocket"></i> Starlink Maritime</a>
+                            </li>
+                            <li><a href="products/oneweb.html"><i class="fas fa-globe"></i> Eutelsat OneWeb</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-group">
+                        <h4>GEO Systems</h4>
+                        <ul>
+                            <li><a href="products/inmarsat-fx.html"><i class="fas fa-signal"></i> Inmarsat Fleet
+                                    Xpress</a></li>
+                            <li><a href="products/fleetbroadband.html"><i class="fas fa-broadcast-tower"></i>
+                                    FleetBroadband</a></li>
+                            <li><i class="fas fa-satellite"></i> Fleet One, Sat C, GSPS</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-group">
+                        <h4>MSS & VSAT</h4>
+                        <ul>
+                            <li><a href="products/iridium-certus.html"><i class="fas fa-network-wired"></i> Iridium
+                                    Certus</a></li>
+                            <li><a href="products/kvh-vsat.html"><i class="fas fa-wifi"></i> KVH TracPhone V-Series</a>
+                            </li>
+                            <li><i class="fas fa-server"></i> Open Port, GMDSS Terminals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Maritime Safety & Compliance -->
+                <div class="competency-card">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Maritime Safety & Regulatory Compliance</h3>
+
+                    <ul class="compliance-list">
+                        <li>
+                            <div class="compliance-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>LRIT</strong>
+                                    <span>Long-Range Identification & Tracking</span>
+                                    <span class="badge">200+ tests completed</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="compliance-item">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <strong>SSAS</strong>
+                                    <span>Ship Security Alert System</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="compliance-item">
+                                <i class="fas fa-life-ring"></i>
+                                <div>
+                                    <strong>GMDSS</strong>
+                                    <span>Global Maritime Distress & Safety</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="compliance-item">
+                                <i class="fas fa-broadcast-tower"></i>
+                                <div>
+                                    <strong>AIS</strong>
+                                    <span>Automatic Identification System</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="compliance-item">
+                                <i class="fas fa-book"></i>
+                                <div>
+                                    <strong>SOLAS Compliance</strong>
+                                    <span>Safety of Life at Sea</span>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-shield-alt"></i> Maritime Safety & Regulatory Compliance</h3>
-                    <ul class="skill-list">
-                        <li>LRIT: Long-Range Identification & Tracking (200+ tests completed)</li>
-                        <li>SSAS: Ship Security Alert System Testing</li>
-                        <li>GMDSS: Global Maritime Distress and Safety System Activation</li>
-                        <li>AIS: Automatic Identification System Activation</li>
-                        <li>Regulatory Bodies: SOLAS, IMO, Flag State Compliance (50+ international authorities)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-project-diagram"></i> Service Delivery & Project Management</h3>
-                    <ul class="skill-list">
-                        <li>Vessel Handover/Takeover Projects (200+ vessels)</li>
-                        <li>Vendor & Stakeholder Liaison</li>
-                        <li>Connectivity Management (Provisioning, Activation, Deactivation/Suspension)</li>
-                        <li>Value-Added Service Providers: GT Maritime, Arion, Port-IT, Purple Finder</li>
-                        <li>Business Systems: IBIS, Zoho Desk</li>
-                        <li>Process Documentation (SOPs)</li>
-                    </ul>
+
+                <!-- Service Delivery -->
+                <div class="competency-card">
+                    <div class="card-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Service Delivery & Project Management</h3>
+
+                    <div class="tech-group">
+                        <h4><i class="fas fa-ship"></i> Vessel Operations</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Vessel Handover/Takeover (200+ vessels)</li>
+                            <li><i class="fas fa-check"></i> Connectivity Management</li>
+                            <li><i class="fas fa-check"></i> Vendor & Stakeholder Liaison</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-group">
+                        <h4><i class="fas fa-tools"></i> Value-Added Services</h4>
+                        <ul>
+                            <li><i class="fas fa-ship"></i> GT Maritime</li>
+                            <li><i class="fas fa-cog"></i> Arion</li>
+                            <li><i class="fas fa-network-wired"></i> Port-IT</li>
+                            <li><i class="fas fa-search-location"></i> Purple Finder</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-group">
+                        <h4><i class="fas fa-laptop-code"></i> Business Systems</h4>
+                        <ul>
+                            <li><i class="fas fa-database"></i> IBIS (Customer Billing)</li>
+                            <li><i class="fas fa-ticket-alt"></i> Zoho Desk (600+ tickets/month)</li>
+                            <li><i class="fas fa-file-alt"></i> Process Documentation (SOPs)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
+    <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title">Work Experience</h2>
+            <div class="section-header">
+                <span class="section-tag">Professional Journey</span>
+                <h2>Work Experience</h2>
+            </div>
+
             <div class="timeline">
-                <div class="timeline-item left">
+                <!-- Satcom Specialist II -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">May 2024 - Present</div>
-                        <div class="timeline-title">Satcom Specialist II</div>
-                        <div class="timeline-company">Station Satcom | Mumbai, India</div>
-                        <ul class="timeline-description">
-                            <li>Executed end-to-end activation and deactivation for maritime satellite services, with specialized focus on Starlink terminals</li>
-                            <li>Acted as central point of contact for service provisioning, liaising between sales, international vendors, and vessel management</li>
-                            <li>Successfully executed 200+ LRIT Conformance Tests for Sat C and standalone terminals, ensuring 100% compliance with SOLAS requirements</li>
+                        <div class="job-header">
+                            <div>
+                                <h3>Satcom Specialist II</h3>
+                                <div class="company">
+                                    <i class="fas fa-building"></i>
+                                    <a href="https://www.stationsatcom.com/" target="_blank">Station Satcom</a>
+                                </div>
+                            </div>
+                            <div class="duration">
+                                <i class="fas fa-calendar-alt"></i>
+                                May 2024 - Present
+                            </div>
+                        </div>
+
+                        <ul class="achievements">
+                            <li>Executed end-to-end activation and deactivation for maritime satellite services, with
+                                specialized focus on <a href="products/starlink.html">Starlink terminals</a></li>
+                            <li>Acted as central point of contact for service provisioning, liaising between sales,
+                                international vendors, and vessel management</li>
+                            <li>Successfully executed <strong>200+ LRIT Conformance Tests</strong> for Sat C and
+                                standalone terminals, ensuring <strong>100% compliance</strong> with SOLAS requirements
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item right">
+
+                <!-- Sr. Executive - IT & Service -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">May 2022 - Apr 2024</div>
-                        <div class="timeline-title">Sr. Executive - IT & Service</div>
-                        <div class="timeline-company">Station Satcom | Mumbai, India</div>
-                        <ul class="timeline-description">
-                            <li>Provided Tier-2 application support for onboard communication equipment, resolving complex connectivity issues</li>
-                            <li>Maintained 100% accuracy in customer billing database (IBIS), managing account creation, service changes, and deactivations</li>
-                            <li>Managed vessel takeovers and handovers, creating detailed checklists that reduced service issues by over 30%</li>
+                        <div class="job-header">
+                            <div>
+                                <h3>Sr. Executive - IT & Service</h3>
+                                <div class="company">
+                                    <i class="fas fa-building"></i>
+                                    <a href="https://www.stationsatcom.com/" target="_blank">Station Satcom</a>
+                                </div>
+                            </div>
+                            <div class="duration">
+                                <i class="fas fa-calendar-alt"></i>
+                                May 2022 - Apr 2024
+                            </div>
+                        </div>
+
+                        <ul class="achievements">
+                            <li>Provided Tier-2 application support for onboard communication equipment, resolving
+                                complex connectivity issues</li>
+                            <li>Maintained <strong>100% accuracy</strong> in customer billing database (IBIS), managing
+                                account creation, service changes, and deactivations</li>
+                            <li>Managed vessel takeovers and handovers, creating detailed checklists that
+                                <strong>reduced service issues by over 30%</strong></li>
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item left">
+
+                <!-- Executive - IT & Service -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">May 2021 - Apr 2022</div>
-                        <div class="timeline-title">Executive - IT & Service</div>
-                        <div class="timeline-company">Station Satcom | Mumbai, India</div>
-                        <ul class="timeline-description">
-                            <li>Managed full lifecycle of support incidents using Zoho Desk ticketing system (600+ tickets monthly)</li>
-                            <li>Achieved 90%+ customer satisfaction rating consistently</li>
-                            <li>Created and maintained standard operating procedures (SOPs) for service activations and troubleshooting</li>
+                        <div class="job-header">
+                            <div>
+                                <h3>Executive - IT & Service</h3>
+                                <div class="company">
+                                    <i class="fas fa-building"></i>
+                                    <a href="https://www.stationsatcom.com/" target="_blank">Station Satcom</a>
+                                </div>
+                            </div>
+                            <div class="duration">
+                                <i class="fas fa-calendar-alt"></i>
+                                May 2021 - Apr 2022
+                            </div>
+                        </div>
+
+                        <ul class="achievements">
+                            <li>Managed full lifecycle of support incidents using Zoho Desk ticketing system
+                                (<strong>600+ tickets monthly</strong>)</li>
+                            <li>Achieved <strong>90%+ customer satisfaction rating</strong> consistently</li>
+                            <li>Created and maintained standard operating procedures (SOPs) for service activations and
+                                troubleshooting</li>
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item right">
+
+                <!-- Technical Assistant - Service -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">Oct 2018 - Apr 2021</div>
-                        <div class="timeline-title">Technical Assistant - Service</div>
-                        <div class="timeline-company">Station Satcom | Mumbai, India</div>
-                        <ul class="timeline-description">
+                        <div class="job-header">
+                            <div>
+                                <h3>Technical Assistant - Service</h3>
+                                <div class="company">
+                                    <i class="fas fa-building"></i>
+                                    <a href="https://www.stationsatcom.com/" target="_blank">Station Satcom</a>
+                                </div>
+                            </div>
+                            <div class="duration">
+                                <i class="fas fa-calendar-alt"></i>
+                                Oct 2018 - Apr 2021
+                            </div>
+                        </div>
+
+                        <ul class="achievements">
                             <li>Supported maritime satellite communications operations</li>
                             <li>Assisted in service provisioning and technical troubleshooting</li>
                             <li>Contributed to process improvements and documentation</li>
@@ -875,135 +391,120 @@
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-card">
-                <div class="education-header">
-                    <div class="education-degree">B.E in Information Technology</div>
-                    <div class="education-year">Graduation: 2018</div>
-                </div>
-                <div class="education-school">Thadomal Shahani Engineering College - Mumbai</div>
-                <div class="education-gpa">CGPA: 6.28</div>
-            </div>
-        </div>
-    </section>
-
     <!-- Certifications Section -->
-    <section id="certifications">
+    <section id="certifications" class="certifications">
         <div class="container">
-            <h2 class="section-title">Certifications & Awards</h2>
-            <div class="certifications-container">
-                <div class="certification-card">
-                    <div class="certification-icon">
-                        <i class="fas fa-certificate"></i>
+            <div class="section-header">
+                <span class="section-tag">Recognition & Achievements</span>
+                <h2>Certifications & Awards</h2>
+            </div>
+
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <div class="certification-details">
-                        <h3>Oracle Workforce Development Program</h3>
-                        <p>Professional Certification</p>
+                    <h3>Oracle Workforce Development Program</h3>
+                    <p>Completed comprehensive training program focused on enterprise systems and professional
+                        development.</p>
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i> Certified
                     </div>
                 </div>
-                <div class="certification-card">
-                    <div class="certification-icon">
-                        <i class="fas fa-award"></i>
+
+                <div class="cert-card award">
+                    <div class="cert-icon">
+                        <i class="fas fa-trophy"></i>
                     </div>
-                    <div class="certification-details">
-                        <h3>"Engineering Excellence" Award</h3>
-                        <p>Thadomal Shahani Engineering College</p>
+                    <h3>"Engineering Excellence" Award</h3>
+                    <p>Recognized for outstanding contributions to service delivery, process optimization, and
+                        maintaining exceptional customer satisfaction ratings.</p>
+                    <div class="cert-badge">
+                        <i class="fas fa-award"></i> Award Winner
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Personal Details Section -->
-    <section id="personal">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Personal Details</h2>
-            <div class="personal-details">
-                <div class="details-grid">
-                    <div class="detail-item">
-                        <div class="detail-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="detail-text">
-                            <div class="detail-label">Address</div>
-                            <div>Bandra East, Mumbai (400051) - India</div>
-                        </div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-icon">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="detail-text">
-                            <div class="detail-label">Additional Information</div>
-                            <div>Locomotor Disability (No Assistance Required)</div>
-                        </div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-icon">
-                            <i class="fas fa-language"></i>
-                        </div>
-                        <div class="detail-text">
-                            <div class="detail-label">Languages</div>
-                            <div>English, Marathi, Hindi</div>
-                        </div>
-                    </div>
+            <div class="section-header">
+                <span class="section-tag">Get in Touch</span>
+                <h2>Contact Me</h2>
+                <p>Interested in discussing satellite communications, maritime connectivity solutions, or potential
+                    collaborations? Let's connect!</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <a href="mailto:rahul.sarode@stationsatcom.com">rahul.sarode@stationsatcom.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <a href="https://linkedin.com/in/rahul-sarode-7780b7151/" target="_blank">Connect on LinkedIn</a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Company</h3>
+                    <a href="https://www.stationsatcom.com/" target="_blank">Station Satcom</a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fas fa-file-download"></i>
+                    <h3>Resume</h3>
+                    <a href="https://drive.google.com/file/d/1Ek4F9wWm9NrSTJN2pxt5mQgW1H2Qikdb/view?usp=sharing"
+                        target="_blank">Download PDF</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Rahul Sarode. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/rahul-sarode-7780b7151/" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="mailto:rahulsarode048@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+                <div>
+                    <h3>Rahul Sarode</h3>
+                    <p>Satellite Communications Specialist</p>
                 </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#competencies">Competencies</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <a href="https://www.stationsatcom.com/" target="_blank">Station Satcom</a>
+                    <p>Empowering Digital Transformation in Maritime Communications</p>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/rahul-sarode-7780b7151/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Rahul-Sarode-007" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rahul Sarode. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Active navigation highlighting
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-links a');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
