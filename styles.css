@@ -636,7 +636,9 @@ section {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(3, 1fr);
+   
     gap: 2rem;
 }
 
@@ -684,7 +686,9 @@ section {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(3, 1fr);
+   
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -789,4 +793,5 @@ section {
     .job-header {
         flex-direction: column;
     }
+
 }
