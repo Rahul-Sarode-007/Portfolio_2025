@@ -58,7 +58,8 @@ h4 {
 a {
     color: #0066CC;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 a:hover {
@@ -284,15 +285,38 @@ section {
     color: #666;
 }
 
+/* Product links within paragraphs */
+.about-content p a,
+.timeline-content a {
+    color: #0066CC;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.about-content p a:hover,
+.timeline-content a:hover {
+    color: #0052A3;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
 .link-primary {
     color: #0066CC;
     font-weight: 600;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s;
+    border-bottom: 2px solid #0066CC;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
 }
 
 .link-primary:hover {
-    border-bottom-color: #0066CC;
+    color: #0052A3;
+    border-bottom-color: #0052A3;
+    transform: translateY(-1px);
 }
 
 .achievement-box {
@@ -381,32 +405,80 @@ section {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.5rem 0.75rem;
     border-radius: 6px;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.tech-group ul li a::after {
+    content: '→';
+    position: absolute;
+    right: 0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #0066CC;
+    font-weight: bold;
 }
 
 .tech-group ul li a:hover {
     background: rgba(0, 102, 204, 0.1);
-    transform: translateX(5px);
+    border-color: #0066CC;
+    padding-right: 2rem;
+}
+
+.tech-group ul li a:hover::after {
+    opacity: 1;
+    right: 0.75rem;
 }
 
 .tech-group ul li i {
     color: #0066CC;
 }
 
+.compliance-list li a {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .compliance-item {
     display: flex;
     gap: 1rem;
-    padding: 1rem;
-    border: 1px solid #e9ecef;
+    padding: 1.25rem;
+    border: 2px solid #e9ecef;
     border-radius: 8px;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    background: white;
+}
+
+.compliance-item::after {
+    content: '→';
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #0066CC;
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 .compliance-item:hover {
-    background: rgba(0, 102, 204, 0.05);
+    background: rgba(0, 102, 204, 0.08);
     border-color: #0066CC;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+}
+
+.compliance-item:hover::after {
+    opacity: 1;
+    right: 1rem;
 }
 
 .compliance-item i {
@@ -419,6 +491,7 @@ section {
     display: block;
     color: #1a1a1a;
     margin-bottom: 0.25rem;
+    font-weight: 600;
 }
 
 .compliance-item span {
@@ -636,9 +709,7 @@ section {
 
 .contact-grid {
     display: grid;
-    /* grid-template-columns: repeat(4, 1fr); */
     grid-template-columns: repeat(3, 1fr);
-   
     gap: 2rem;
 }
 
@@ -671,6 +742,7 @@ section {
 .contact-card a {
     color: #666;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .contact-card a:hover {
@@ -686,9 +758,7 @@ section {
 
 .footer-content {
     display: grid;
-    /* grid-template-columns: repeat(4, 1fr); */
     grid-template-columns: repeat(3, 1fr);
-   
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -793,5 +863,4 @@ section {
     .job-header {
         flex-direction: column;
     }
-
 }
