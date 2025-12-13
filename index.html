@@ -22,6 +22,14 @@
 </head>
 
 <body>
+    <!-- Custom Cursor Removed -->
+
+    <!-- Particle Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -37,7 +45,7 @@
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#competencies">Competencies</a></li>
+                <li><a href="#tech-stack">Competencies</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -78,10 +86,10 @@
 
                 <div class="hero-buttons">
                     <a href="https://drive.google.com/file/d/1EQ47JpXY_fR_XApOQf8ZLBudTczc6RGY/view?usp=sharing"
-                        target="_blank" class="btn btn-primary">
+                        target="_blank" class="btn btn-primary magnetic-btn">
                         <i class="fas fa-download"></i> Download Resume
                     </a>
-                    <a href="#contact" class="btn btn-secondary">
+                    <a href="#contact" class="btn btn-secondary magnetic-btn">
                         <i class="fas fa-envelope"></i> Get in Touch
                     </a>
                 </div>
@@ -97,7 +105,7 @@
                 <h2>About Me</h2>
             </div>
 
-            <div class="about-content">
+            <div class="about-content reveal">
                 <!-- <p class="lead">
                     Results-driven Satellite Communications Specialist with <strong>7+ years of expertise</strong> in
                     end-to-end maritime connectivity solutions, 
@@ -132,143 +140,138 @@
                 </div> -->
             </div>
         </div>
+    </section>
 
-        <!-- ************************************ -->
-        <!-- Tech Stack Section HTML -->
-        <section class="tech-stack" id="tech-stack">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Technical Skills</span>
-                    <h2>Tech Stack</h2>
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Technical Skills</span>
+                <h2>Tech Stack</h2>
+            </div>
+
+            <div class="tech-stack-grid">
+                <!-- HTML -->
+                <div class="tech-item" data-progress="90">
+                    <div class="circular-progress">
+                        <svg viewBox="0 0 160 160">
+                            <defs>
+                                <linearGradient id="gradient-html" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#0088FF;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle class="progress-bg" cx="80" cy="80" r="60"></circle>
+                            <circle class="progress-bar" cx="80" cy="80" r="60" style="stroke: url(#gradient-html)">
+                            </circle>
+                        </svg>
+                        <div class="tech-logo"><i class="fab fa-html5"></i></div>
+                    </div>
+                    <div class="tech-name">HTML</div>
+                    <div class="tech-percentage">Advanced</div>
                 </div>
 
-                <div class="tech-stack-grid">
-                    <!-- HTML -->
-                    <div class="tech-item" data-progress="90">
-                        <div class="circular-progress">
-                            <svg viewBox="0 0 160 160">
-                                <defs>
-                                    <linearGradient id="gradient-html" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#0088FF;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <circle class="progress-bg" cx="80" cy="80" r="60"></circle>
-                                <circle class="progress-bar" cx="80" cy="80" r="60" style="stroke: url(#gradient-html)">
-                                </circle>
-                            </svg>
-                            <div class="tech-logo"><i class="fab fa-html5"></i></div>
-                        </div>
-                        <div class="tech-name">HTML</div>
-                        <div class="tech-percentage">Advanced</div>
+                <!-- CSS -->
+                <div class="tech-item" data-progress="70">
+                    <div class="circular-progress">
+                        <svg viewBox="0 0 160 160">
+                            <defs>
+                                <linearGradient id="gradient-css" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#0088FF;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle class="progress-bg" cx="80" cy="80" r="60"></circle>
+                            <circle class="progress-bar" cx="80" cy="80" r="60" style="stroke: url(#gradient-css)">
+                            </circle>
+                        </svg>
+                        <div class="tech-logo"><i class="fab fa-css3-alt"></i></div>
                     </div>
+                    <div class="tech-name">CSS</div>
+                    <div class="tech-percentage">Intermediate</div>
+                </div>
 
-                    <!-- CSS -->
-                    <div class="tech-item" data-progress="70">
-                        <div class="circular-progress">
-                            <svg viewBox="0 0 160 160">
-                                <defs>
-                                    <linearGradient id="gradient-css" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#0088FF;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <circle class="progress-bg" cx="80" cy="80" r="60"></circle>
-                                <circle class="progress-bar" cx="80" cy="80" r="60" style="stroke: url(#gradient-css)">
-                                </circle>
-                            </svg>
-                            <div class="tech-logo"><i class="fab fa-css3-alt"></i></div>
-                        </div>
-                        <div class="tech-name">CSS</div>
-                        <div class="tech-percentage">Intermediate</div>
+                <!-- JavaScript -->
+                <div class="tech-item" data-progress="70">
+                    <div class="circular-progress">
+                        <svg viewBox="0 0 160 160">
+                            <defs>
+                                <linearGradient id="gradient-js" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#0088FF;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle class="progress-bg" cx="80" cy="80" r="60"></circle>
+                            <circle class="progress-bar" cx="80" cy="80" r="60" style="stroke: url(#gradient-js)">
+                            </circle>
+                        </svg>
+                        <div class="tech-logo"><i class="fab fa-js"></i></div>
                     </div>
+                    <div class="tech-name">JavaScript</div>
+                    <div class="tech-percentage">Intermediate</div>
+                </div>
 
-                    <!-- JavaScript -->
-                    <div class="tech-item" data-progress="70">
-                        <div class="circular-progress">
-                            <svg viewBox="0 0 160 160">
-                                <defs>
-                                    <linearGradient id="gradient-js" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#0088FF;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <circle class="progress-bg" cx="80" cy="80" r="60"></circle>
-                                <circle class="progress-bar" cx="80" cy="80" r="60" style="stroke: url(#gradient-js)">
-                                </circle>
-                            </svg>
-                            <div class="tech-logo"><i class="fab fa-js"></i></div>
-                        </div>
-                        <div class="tech-name">JavaScript</div>
-                        <div class="tech-percentage">Intermediate</div>
+                <!-- React -->
+                <div class="tech-item" data-progress="55">
+                    <div class="circular-progress">
+                        <svg viewBox="0 0 160 160">
+                            <defs>
+                                <linearGradient id="gradient-react" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#0088FF;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle class="progress-bg" cx="80" cy="80" r="60"></circle>
+                            <circle class="progress-bar" cx="80" cy="80" r="60" style="stroke: url(#gradient-react)">
+                            </circle>
+                        </svg>
+                        <div class="tech-logo"><i class="fab fa-react"></i></div>
                     </div>
+                    <div class="tech-name">React</div>
+                    <div class="tech-percentage">Working Knowledge</div>
+                </div>
 
-                    <!-- React -->
-                    <div class="tech-item" data-progress="55">
-                        <div class="circular-progress">
-                            <svg viewBox="0 0 160 160">
-                                <defs>
-                                    <linearGradient id="gradient-react" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#0088FF;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <circle class="progress-bg" cx="80" cy="80" r="60"></circle>
-                                <circle class="progress-bar" cx="80" cy="80" r="60"
-                                    style="stroke: url(#gradient-react)">
-                                </circle>
-                            </svg>
-                            <div class="tech-logo"><i class="fab fa-react"></i></div>
-                        </div>
-                        <div class="tech-name">React</div>
-                        <div class="tech-percentage">Working Knowledge</div>
+                <!-- Python -->
+                <div class="tech-item" data-progress="50">
+                    <div class="circular-progress">
+                        <svg viewBox="0 0 160 160">
+                            <defs>
+                                <linearGradient id="gradient-python" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#0088FF;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle class="progress-bg" cx="80" cy="80" r="60"></circle>
+                            <circle class="progress-bar" cx="80" cy="80" r="60" style="stroke: url(#gradient-python)">
+                            </circle>
+                        </svg>
+                        <div class="tech-logo"><i class="fab fa-python"></i></div>
                     </div>
+                    <div class="tech-name">Python</div>
+                    <div class="tech-percentage">Working Knowledge</div>
+                </div>
 
-                    <!-- Python -->
-                    <div class="tech-item" data-progress="50">
-                        <div class="circular-progress">
-                            <svg viewBox="0 0 160 160">
-                                <defs>
-                                    <linearGradient id="gradient-python" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#0088FF;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <circle class="progress-bg" cx="80" cy="80" r="60"></circle>
-                                <circle class="progress-bar" cx="80" cy="80" r="60"
-                                    style="stroke: url(#gradient-python)">
-                                </circle>
-                            </svg>
-                            <div class="tech-logo"><i class="fab fa-python"></i></div>
-                        </div>
-                        <div class="tech-name">Python</div>
-                        <div class="tech-percentage">Working Knowledge</div>
+                <!-- SQL -->
+                <div class="tech-item" data-progress="70">
+                    <div class="circular-progress">
+                        <svg viewBox="0 0 160 160">
+                            <defs>
+                                <linearGradient id="gradient-sql" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#0088FF;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle class="progress-bg" cx="80" cy="80" r="60"></circle>
+                            <circle class="progress-bar" cx="80" cy="80" r="60" style="stroke: url(#gradient-sql)">
+                            </circle>
+                        </svg>
+                        <div class="tech-logo"><i class="fas fa-database"></i></div>
                     </div>
-
-                    <!-- SQL -->
-                    <div class="tech-item" data-progress="70">
-                        <div class="circular-progress">
-                            <svg viewBox="0 0 160 160">
-                                <defs>
-                                    <linearGradient id="gradient-sql" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#0088FF;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <circle class="progress-bg" cx="80" cy="80" r="60"></circle>
-                                <circle class="progress-bar" cx="80" cy="80" r="60" style="stroke: url(#gradient-sql)">
-                                </circle>
-                            </svg>
-                            <div class="tech-logo"><i class="fas fa-database"></i></div>
-                        </div>
-                        <div class="tech-name">SQL</div>
-                        <div class="tech-percentage">Intermediate</div>
-                    </div>
+                    <div class="tech-name">SQL</div>
+                    <div class="tech-percentage">Intermediate</div>
                 </div>
             </div>
-        </section>
-
-        <!-- ************************************ -->
+        </div>
     </section>
 
     <!-- Competencies Section -->
@@ -279,151 +282,189 @@
                 <h2>Core Competencies & Technical Proficiencies</h2>
             </div>
 
-            <div class="competencies-grid">
-                <!-- Satellite Systems -->
-                <div class="competency-card">
-                    <div class="card-icon">
-                        <i class="fas fa-satellite-dish"></i>
-                    </div>
-                    <h3>Satellite Systems</h3>
+            <!-- Carousel Container -->
+            <!-- Premium Carousel Container -->
+            <div class="carousel-container">
+                <!-- Navigation Arrows -->
+                <button class="carousel-arrow carousel-arrow-left" aria-label="Previous slide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-arrow carousel-arrow-right" aria-label="Next slide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
 
-                    <div class="tech-group">
-                        <h4>LEO Systems</h4>
-                        <ul>
-                            <li><a href="products/starlink.html"><i class="fas fa-rocket"></i> Starlink Maritime</a>
-                            </li>
-                            <li><a href="products/oneweb.html"><i class="fas fa-globe"></i> Eutelsat OneWeb</a></li>
-                        </ul>
+                <!-- Carousel Slides -->
+                <div class="carousel-slides">
+
+                    <!-- SLIDE 1: Satellite Systems (3 boxes) -->
+                    <div class="carousel-slide active">
+                        <div class="carousel-grid carousel-grid-3">
+
+                            <!-- Box 1: LEO Systems -->
+                            <div class="carousel-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h3>LEO Systems</h3>
+                                <ul class="card-links">
+                                    <li><a href="products/starlink.html"><i class="fas fa-rocket"></i>Starlink
+                                            Maritime</a></li>
+                                    <li><a href="products/oneweb.html"><i class="fas fa-globe"></i>Eutelsat OneWeb</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Box 2: GEO Systems -->
+                            <div class="carousel-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-signal"></i>
+                                </div>
+                                <h3>GEO Systems</h3>
+                                <ul class="card-links">
+                                    <li><a href="products/inmarsat-fx.html"><i class="fas fa-signal"></i>Inmarsat Fleet
+                                            Xpress</a>
+                                    </li>
+                                    <li><a href="products/fleetbroadband.html"><i
+                                                class="fas fa-broadcast-tower"></i>FleetBroadband</a></li>
+                                    <li><i class="fas fa-satellite"></i> Fleet One, Sat C, GSPS</li>
+                                </ul>
+                            </div>
+
+                            <!-- Box 3: MSS & VSAT -->
+                            <div class="carousel-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <h3>MSS & VSAT</h3>
+                                <ul class="card-links">
+                                    <li><a href="products/iridium-certus.html"><i
+                                                class="fas fa-network-wired"></i>Iridium
+                                            Certus</a></li>
+                                    <li><a href="products/kvh-vsat.html"><i class="fas fa-wifi"></i>KVH TracPhone
+                                            V-Series</a></li>
+                                    <li><i class="fas fa-server"></i> Open Port, GMDSS Terminals</li>
+                                </ul>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="tech-group">
-                        <h4>GEO Systems</h4>
-                        <ul>
-                            <li><a href="products/inmarsat-fx.html"><i class="fas fa-signal"></i> Inmarsat Fleet
-                                    Xpress</a></li>
-                            <li><a href="products/fleetbroadband.html"><i class="fas fa-broadcast-tower"></i>
-                                    FleetBroadband</a></li>
-                            <li><i class="fas fa-satellite"></i> Fleet One, Sat C, GSPS</li>
-                        </ul>
+                    <!-- SLIDE 2: Maritime Safety & Compliance (5 boxes) -->
+                    <div class="carousel-slide">
+                        <div class="carousel-grid carousel-grid-5">
+
+                            <!-- Box 1: LRIT -->
+                            <div class="carousel-card card-clickable">
+                                <a href="products/lrit.html" class="card-link-wrapper">
+                                    <div class="card-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <h3>LRIT</h3>
+                                    <p>Long-Range Identification & Tracking</p>
+                                </a>
+                            </div>
+
+                            <!-- Box 2: SSAS -->
+                            <div class="carousel-card card-clickable">
+                                <a href="products/ssas.html" class="card-link-wrapper">
+                                    <div class="card-icon">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <h3>SSAS</h3>
+                                    <p>Ship Security Alert System</p>
+                                </a>
+                            </div>
+
+                            <!-- Box 3: GMDSS -->
+                            <div class="carousel-card card-clickable">
+                                <a href="products/gmdss.html" class="card-link-wrapper">
+                                    <div class="card-icon">
+                                        <i class="fas fa-life-ring"></i>
+                                    </div>
+                                    <h3>GMDSS</h3>
+                                    <p>Global Maritime Distress & Safety</p>
+                                </a>
+                            </div>
+
+                            <!-- Box 4: AIS -->
+                            <div class="carousel-card card-clickable">
+                                <a href="products/ais.html" class="card-link-wrapper">
+                                    <div class="card-icon">
+                                        <i class="fas fa-broadcast-tower"></i>
+                                    </div>
+                                    <h3>AIS</h3>
+                                    <p>Automatic Identification System</p>
+                                </a>
+                            </div>
+
+                            <!-- Box 5: SOLAS -->
+                            <div class="carousel-card card-clickable">
+                                <a href="products/solas.html" class="card-link-wrapper">
+                                    <div class="card-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <h3>SOLAS Compliance</h3>
+                                    <p>Safety of Life at Sea</p>
+                                </a>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="tech-group">
-                        <h4>MSS & VSAT</h4>
-                        <ul>
-                            <li><a href="products/iridium-certus.html"><i class="fas fa-network-wired"></i> Iridium
-                                    Certus</a></li>
-                            <li><a href="products/kvh-vsat.html"><i class="fas fa-wifi"></i> KVH TracPhone V-Series</a>
-                            </li>
-                            <li><i class="fas fa-server"></i> Open Port, GMDSS Terminals</li>
-                        </ul>
+                    <!-- SLIDE 3: Service Delivery & Project Management (3 boxes) -->
+                    <div class="carousel-slide">
+                        <div class="carousel-grid carousel-grid-3">
+
+                            <!-- Box 1: Vessel Operations -->
+                            <div class="carousel-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-ship"></i>
+                                </div>
+                                <h3>Vessel Operations</h3>
+                                <ul class="card-links">
+                                    <li><i class="fas fa-check"></i> Vessel Handover/Takeover</li>
+                                    <li><i class="fas fa-check"></i> Connectivity Management</li>
+                                    <li><i class="fas fa-check"></i> Vendor & Stakeholder Liaison</li>
+                                </ul>
+                            </div>
+
+                            <!-- Box 2: Value-Added Services -->
+                            <div class="carousel-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h3>Value-Added Services</h3>
+                                <ul class="card-links">
+                                    <li><i class="fas fa-ship"></i> GT Maritime</li>
+                                    <li><i class="fas fa-cog"></i> Arion</li>
+                                    <li><i class="fas fa-network-wired"></i> Port-IT</li>
+                                    <li><i class="fas fa-search-location"></i> Purple Finder</li>
+                                </ul>
+                            </div>
+
+                            <!-- Box 3: Business Systems -->
+                            <div class="carousel-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <h3>Business Systems</h3>
+                                <ul class="card-links">
+                                    <li><i class="fas fa-database"></i> IBIS (Customer Billing)</li>
+                                    <li><i class="fas fa-ticket-alt"></i> Zoho Desk (Ticket Management)</li>
+                                    <li><i class="fas fa-file-alt"></i> Process Documentation (SOPs)</li>
+                                </ul>
+                            </div>
+
+                        </div>
                     </div>
+
                 </div>
 
-                <!-- Maritime Safety & Compliance -->
-                <div class="competency-card">
-                    <div class="card-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Maritime Safety & Regulatory Compliance</h3>
-
-                    <ul class="compliance-list">
-                        <li>
-                            <a href="products/lrit.html">
-                                <div class="compliance-item">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <div>
-                                        <strong>LRIT</strong>
-                                        <span>Long-Range Identification & Tracking</span>
-                                        <!-- <span>200+ tests completed</span> -->
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="products/ssas.html">
-                                <div class="compliance-item">
-                                    <i class="fas fa-exclamation-triangle"></i>
-                                    <div>
-                                        <strong>SSAS</strong>
-                                        <span>Ship Security Alert System</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="products/gmdss.html">
-                                <div class="compliance-item">
-                                    <i class="fas fa-life-ring"></i>
-                                    <div>
-                                        <strong>GMDSS</strong>
-                                        <span>Global Maritime Distress & Safety</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="products/ais.html">
-                                <div class="compliance-item">
-                                    <i class="fas fa-broadcast-tower"></i>
-                                    <div>
-                                        <strong>AIS</strong>
-                                        <span>Automatic Identification System</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="products/solas.html">
-                                <div class="compliance-item">
-                                    <i class="fas fa-book"></i>
-                                    <div>
-                                        <strong>SOLAS Compliance</strong>
-                                        <span>Safety of Life at Sea</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Service Delivery -->
-                <div class="competency-card">
-                    <div class="card-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3>Service Delivery & Project Management</h3>
-
-                    <div class="tech-group">
-                        <h4><i class="fas fa-ship"></i> Vessel Operations</h4>
-                        <ul>
-                            <!-- <li><i class="fas fa-check"></i> Vessel Handover/Takeover (200+ vessels)</li> -->
-                            <li><i class="fas fa-check"></i> Vessel Handover/Takeover</li>
-
-                            <li><i class="fas fa-check"></i> Connectivity Management</li>
-                            <li><i class="fas fa-check"></i> Vendor & Stakeholder Liaison</li>
-                        </ul>
-                    </div>
-
-                    <div class="tech-group">
-                        <h4><i class="fas fa-tools"></i> Value-Added Services</h4>
-                        <ul>
-                            <li><i class="fas fa-ship"></i> GT Maritime</li>
-                            <li><i class="fas fa-cog"></i> Arion</li>
-                            <li><i class="fas fa-network-wired"></i> Port-IT</li>
-                            <li><i class="fas fa-search-location"></i> Purple Finder</li>
-                        </ul>
-                    </div>
-
-                    <div class="tech-group">
-                        <h4><i class="fas fa-laptop-code"></i> Business Systems</h4>
-                        <ul>
-                            <li><i class="fas fa-database"></i> IBIS (Customer Billing)</li>
-                            <!-- <li><i class="fas fa-ticket-alt"></i> Zoho Desk (600+ tickets/month)</li> -->
-                            <li><i class="fas fa-ticket-alt"></i> Zoho Desk (Ticket Management)</li>
-
-                            <li><i class="fas fa-file-alt"></i> Process Documentation (SOPs)</li>
-                        </ul>
-                    </div>
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
                 </div>
             </div>
         </div>
@@ -578,7 +619,7 @@
             <div class="cert-grid">
 
 
-                <div class="cert-card award">
+                <div class="cert-card award reveal stagger-1">
                     <div class="cert-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
@@ -589,7 +630,7 @@
                     </div>
                 </div>
 
-                <div class="cert-card">
+                <div class="cert-card reveal stagger-2">
                     <div class="cert-icon">
                         <!-- <i class="fas fa-graduation-cap"></i> -->
                         <i class="fas fa-trophy"></i>
@@ -618,7 +659,7 @@
 
             <div class="contact-grid">
                 <a href="mailto:rahul.sarode@stationsatcom.com">
-                    <div class="contact-card">
+                    <div class="contact-card reveal stagger-1">
                         <i class="fas fa-envelope"></i>
                         <h3>Email</h3>
                         rahulsarode048@gmail.com
@@ -626,7 +667,7 @@
                 </a>
 
                 <a href="https://linkedin.com/in/rahul-sarode-7780b7151/" target="_blank">
-                    <div class="contact-card">
+                    <div class="contact-card reveal stagger-2">
                         <i class="fab fa-linkedin"></i>
                         <h3>LinkedIn</h3>
                         Connect on LinkedIn
@@ -641,7 +682,7 @@
                 </a> -->
                 <a href="https://drive.google.com/file/d/1EQ47JpXY_fR_XApOQf8ZLBudTczc6RGY/view?usp=sharing"
                     target="_blank">
-                    <div class="contact-card">
+                    <div class="contact-card reveal stagger-3">
                         <i class="fas fa-file-download"></i>
                         <h3>Resume</h3>
                         Download PDF

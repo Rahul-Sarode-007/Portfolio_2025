@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../styles.css">
     <style>
         .product-hero {
-            background: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%);
+            background: linear-gradient(135deg, #0066CC 0%, #0088FF 100%);
             color: white;
             padding: 120px 0 80px;
             text-align: center;
@@ -30,6 +30,24 @@
 
         .product-content {
             padding: 60px 0;
+            background: #0a192f;
+            color: #ccd6f6;
+        }
+
+        .product-content h2,
+        .product-content h4 {
+            color: #ffffff;
+        }
+
+        .product-content p,
+        .product-content ul li {
+            color: #8892b0;
+            line-height: 1.8;
+        }
+
+        .product-content div[style*="background"] {
+            background: rgba(255, 255, 255, 0.03) !important;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .specs-grid {
@@ -40,26 +58,34 @@
         }
 
         .spec-card {
-            background: white;
-            border: 2px solid #e9ecef;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 12px;
             padding: 1.5rem;
             text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .spec-card:hover {
+            border-color: rgba(0, 136, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 136, 255, 0.2);
         }
 
         .spec-card i {
             font-size: 2.5rem;
-            color: #FF8C00;
+            color: #0088FF;
             margin-bottom: 1rem;
         }
 
         .spec-card h3 {
             font-size: 1.125rem;
             margin-bottom: 0.5rem;
+            color: #ffffff;
         }
 
         .spec-card p {
-            color: #666;
+            color: #8892b0;
             font-size: 0.875rem;
         }
 
@@ -71,14 +97,26 @@
         .feature-list li {
             padding: 1rem;
             margin-bottom: 1rem;
-            background: #f8f9fa;
-            border-left: 4px solid #FF8C00;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #0088FF;
             border-radius: 8px;
+            color: #ccd6f6;
+            transition: all 0.3s ease;
+        }
+
+        .feature-list li:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-left-color: #00d4ff;
         }
 
         .feature-list li i {
-            color: #FF8C00;
+            color: #0088FF;
             margin-right: 0.75rem;
+        }
+
+        .feature-list strong {
+            color: #ffffff;
         }
 
         @media (max-width: 768px) {
@@ -232,7 +270,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                 <p>&copy; 2025 Rahul Sarode - Personal portfolio. Does not represent any organization.</p>
+                <p>&copy; 2025 Rahul Sarode - Personal portfolio. Does not represent any organization.</p>
             </div>
         </div>
     </footer>
