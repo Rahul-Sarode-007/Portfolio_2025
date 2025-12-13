@@ -47,3 +47,44 @@ document.querySelectorAll('.competency-card, .cert-card, .contact-card, .timelin
 });
 
 console.log('Portfolio loaded successfully!');
+
+
+// *************************
+
+
+// Tech Stack Circular Progress Animation
+document.addEventListener('DOMContentLoaded', function () {
+    const techItems = document.querySelectorAll('.tech-item');
+
+    // Intersection Observer for scroll-triggered animation
+    const observerOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const item = entry.target;
+                const progress = item.getAttribute('data-progress');
+
+                // Set CSS variable for progress
+                item.style.setProperty('--progress', progress);
+
+                // Add animation class with staggered delay
+                const index = Array.from(techItems).indexOf(item);
+                setTimeout(() => {
+                    item.classList.add('animate');
+                }, index * 150);
+
+                // Unobserve after animation
+                observer.unobserve(item);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all tech items
+    techItems.forEach(item => {
+        observer.observe(item);
+    });
+});
